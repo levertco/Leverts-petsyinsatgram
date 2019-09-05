@@ -1638,12 +1638,6 @@ $ heroku logs --tail
 2019-09-03T07:58:36.432687+00:00 app[api]: Attach DATABASE (@ref:postgresql-pointy-70229) by user levertco@gmail.com
 2019-09-03T07:58:36.446545+00:00 app[api]: @ref:postgresql-pointy-70229 completed provisioning, setting DATABASE_URL. by user levertco@gmail.com
 2019-09-03T07:58:47.000000+00:00 app[api]: Build succeeded
-2019-09-03T08:01:27.043281+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=levertsinstagram.herokuapp.com request_id=e0aba370-c5ff-4da7-b3df-6571fa3aab9a fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
-2019-09-03T08:01:28.203531+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=levertsinstagram.herokuapp.com request_id=5cce21e5-4545-4b65-b578-f2d23692db24 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
-2019-09-03T08:04:02.006166+00:00 app[api]: Rollback to v3 by user levertco@gmail.com
-2019-09-03T08:04:02.006166+00:00 app[api]: Release v6 created by user levertco@gmail.com
-2019-09-03T08:04:50.669935+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=levertsinstagram.herokuapp.com request_id=9ac9fd4f-78fd-494e-b481-fa3ba353c247 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
-2019-09-03T08:04:51.153047+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=levertsinstagram.herokuapp.com request_id=2a238a8e-5fe9-40a8-8391-ad94fcd7def0 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
 
 hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
 $ heroku restart                                                                                                                                                            Restarting dynos on ⬢ levertsinstagram... -
