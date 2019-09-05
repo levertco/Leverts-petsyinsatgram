@@ -87,7 +87,9 @@ Currently, there are no known bugs
 
 ### Live link
 You can view the live site [here](https://levertsinstagram.herokuapp.com/)
+
 ### Licence
+
 MIT License
 
 Copyright (c) 2019 Levert Ouma
