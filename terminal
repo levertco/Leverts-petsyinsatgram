@@ -1,0 +1,2210 @@
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ pip install virtualenv
+Requirement already satisfied: virtualenv in c:\users\hp\appdata\local\programs\python\python36\lib\site-packages (16.6.2)
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ source ~/venvs/petsygram/bin/activate
+bash: /c/Users/hp/venvs/petsygram/bin/activate: No such file or directory
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ python
+Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from django.utils.crypto import get_random_string
+>>> chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+>>> get_random_string(50, chars)
+'a!)(#-bqw%63xq_3(3!mnozr*3!kzn&f!j(w+0co!rn6cawbih'
+>>> quit()
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ pip install -r requirements.txt
+Requirement already satisfied: dj-database-url==0.5.0 in c:\users\hp\appdata\local\programs\python\python36\lib\site-packages (from -r requirements.txt (line 1)) (0.5.0)
+Collecting Django==2.1.7 (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/c7/87/fbd666c4f87591ae25b7bb374298e8629816e87193c4099d3608ef11fab9/Django-2.1.7-py3-none-any.whl (7.3MB)
+     |████████████████████████████████| 7.3MB 726kB/s
+Collecting django-material==1.3.0 (from -r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/7d/88/ad92f547e0607a12736ab62b76e0a59da607085682350466269e0baec874/django_material-1.3.0-py2.py3-none-any.whl (7.1MB)
+     |████████████████████████████████| 7.1MB 1.3MB/s
+Collecting djangorestframework==3.8.2 (from -r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/90/30/ad1148098ff0c375df2a30cc4494ed953cf7551fc1ecec30fc951c712d20/djangorestframework-3.8.2-py2.py3-none-any.whl (923kB)
+     |████████████████████████████████| 931kB 467kB/s
+Requirement already satisfied: gunicorn==19.9.0 in c:\users\hp\appdata\local\programs\python\python36\lib\site-packages (from -r requirements.txt (line 5)) (19.9.0)
+Requirement already satisfied: Pillow==5.3.0 in c:\users\hp\appdata\local\programs\python\python36\lib\site-packages (from -r requirements.txt (line 6)) (5.3.0)
+Collecting psycopg2==2.7.5 (from -r requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/7c/8c/fa1ede14d6687c6dd042ce9193f7dea8d76500cbb959fd053f99bcf691de/psycopg2-2.7.5-cp36-cp36m-win_amd64.whl (994kB)
+     |████████████████████████████████| 1.0MB 2.2MB/s
+Collecting pytz==2018.5 (from -r requirements.txt (line 8))
+  Downloading https://files.pythonhosted.org/packages/30/4e/27c34b62430286c6d59177a0842ed90dc789ce5d1ed740887653b898779a/pytz-2018.5-py2.py3-none-any.whl (510kB)
+     |████████████████████████████████| 512kB 1.7MB/s
+Collecting whitenoise==4.1 (from -r requirements.txt (line 9))
+  Using cached https://files.pythonhosted.org/packages/07/2e/c77e71cb448f1a507bc2dfec1d5c24e35d14a737837bea6cdfd6d1ff66bd/whitenoise-4.1-py2.py3-none-any.whl
+Installing collected packages: pytz, Django, django-material, djangorestframework, psycopg2, whitenoise
+  Found existing installation: pytz 2018.7
+    Uninstalling pytz-2018.7:
+      Successfully uninstalled pytz-2018.7
+  Found existing installation: Django 1.11
+    Uninstalling Django-1.11:
+      Successfully uninstalled Django-1.11
+  Found existing installation: djangorestframework 3.10.2
+    Uninstalling djangorestframework-3.10.2:
+      Successfully uninstalled djangorestframework-3.10.2
+  Found existing installation: psycopg2 2.7.6.1
+    Uninstalling psycopg2-2.7.6.1:
+      Successfully uninstalled psycopg2-2.7.6.1
+  Found existing installation: whitenoise 3.3.1
+    Uninstalling whitenoise-3.3.1:
+      Successfully uninstalled whitenoise-3.3.1
+Successfully installed Django-2.1.7 django-material-1.3.0 djangorestframework-3.8.2 psycopg2-2.7.5 pytz-2018.5 whitenoise-4.1
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ python manage.py makemigrations                                                                                                                                         No changes detected
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$  python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, direct_messages, photo_blog, sessions, users
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying direct_messages.0001_initial... OK
+  Applying users.0001_initial... OK
+  Applying photo_blog.0001_initial... OK
+  Applying photo_blog.0002_auto_20181018_1240... OK
+  Applying photo_blog.0003_auto_20181023_0942... OK
+  Applying photo_blog.0004_auto_20181023_0943... OK
+  Applying sessions.0001_initial... OK
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$   python manage.py createsuperuser
+Username (leave blank to use 'hp'):
+Email address: levertco@gmail.com
+Password:
+Password (again):
+The password is too similar to the email address.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$   python manage.py run server                                                                                                                                           Unknown command: 'run'
+Type 'manage.py help' for usage.
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$   python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 09:15:01
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[03/Sep/2019 09:15:22] "GET / HTTP/1.1" 302 0
+[03/Sep/2019 09:15:22] "GET /login/?next=/ HTTP/1.1" 200 3173
+[03/Sep/2019 09:15:22] "GET /static/photo_blog/buttons.js HTTP/1.1" 200 529
+[03/Sep/2019 09:15:22] "GET /static/material/css/materialize.forms.css HTTP/1.1" 200 3207
+[03/Sep/2019 09:15:23] "GET /static/photo_blog/jquery.waypoints.min.js HTTP/1.1" 200 9028
+[03/Sep/2019 09:15:23] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 200 18987
+[03/Sep/2019 09:15:23] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 200 1460
+[03/Sep/2019 09:15:23] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 200 970
+[03/Sep/2019 09:15:23] "GET /media/logo.png HTTP/1.1" 200 6004
+[03/Sep/2019 09:15:23] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 200 111678
+[03/Sep/2019 09:15:23] "GET /static/photo_blog/main.css HTTP/1.1" 200 1057
+[03/Sep/2019 09:15:23] "GET /static/material/js/jquery.formset.js HTTP/1.1" 200 8479
+[03/Sep/2019 09:15:23] "GET /static/material/js/materialize.js HTTP/1.1" 200 370719
+[03/Sep/2019 09:15:23] "GET /static/material/css/materialize.css HTTP/1.1" 200 183164
+[03/Sep/2019 09:15:23] "GET /static/material/js/materialize.forms.js HTTP/1.1" 200 2061
+[03/Sep/2019 09:15:23] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 200 5045
+Not Found: /favicon.ico
+[03/Sep/2019 09:15:24] "GET /favicon.ico HTTP/1.1" 404 6453
+[03/Sep/2019 09:18:40] "GET /login/?next=/ HTTP/1.1" 200 3177
+[03/Sep/2019 09:18:41] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 304 0
+[03/Sep/2019 09:18:41] "GET /static/material/css/materialize.css HTTP/1.1" 304 0
+[03/Sep/2019 09:18:41] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 304 0
+[03/Sep/2019 09:18:41] "GET /static/material/js/jquery.formset.js HTTP/1.1" 304 0
+[03/Sep/2019 09:18:41] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 304 0
+[03/Sep/2019 09:18:41] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 304 0
+[03/Sep/2019 09:18:41] "GET /static/material/css/materialize.forms.css HTTP/1.1" 304 0
+[03/Sep/2019 09:18:41] "GET /static/material/js/materialize.forms.js HTTP/1.1" 304 0
+[03/Sep/2019 09:18:41] "GET /static/material/js/materialize.js HTTP/1.1" 304 0
+[03/Sep/2019 09:24:49] "GET /register/ HTTP/1.1" 200 3957
+[03/Sep/2019 09:24:49] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 304 0
+[03/Sep/2019 09:24:49] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 304 0
+[03/Sep/2019 09:24:49] "GET /static/material/js/jquery.formset.js HTTP/1.1" 304 0
+[03/Sep/2019 09:24:49] "GET /static/material/js/materialize.js HTTP/1.1" 304 0
+[03/Sep/2019 09:24:49] "GET /static/material/css/materialize.css HTTP/1.1" 304 0
+[03/Sep/2019 09:24:50] "GET /static/material/js/materialize.forms.js HTTP/1.1" 304 0
+[03/Sep/2019 09:24:50] "GET /static/material/css/materialize.forms.css HTTP/1.1" 304 0
+[03/Sep/2019 09:24:50] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 304 0
+[03/Sep/2019 09:24:50] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 304 0
+[03/Sep/2019 09:24:54] "GET /login/?next=/ HTTP/1.1" 200 3177
+[03/Sep/2019 09:25:06] "POST /login/?next=/ HTTP/1.1" 200 3434
+[03/Sep/2019 09:25:22] "POST /login/?next=/ HTTP/1.1" 200 3434
+[03/Sep/2019 09:25:36] "POST /login/?next=/ HTTP/1.1" 200 3434
+[03/Sep/2019 09:25:39] "GET /register/ HTTP/1.1" 200 3957
+[03/Sep/2019 09:26:25] "POST /register/ HTTP/1.1" 200 4256
+[03/Sep/2019 09:26:41] "POST /register/ HTTP/1.1" 200 4263
+[03/Sep/2019 09:26:59] "POST /register/ HTTP/1.1" 302 0
+[03/Sep/2019 09:27:00] "GET /login/ HTTP/1.1" 200 3332
+[03/Sep/2019 09:27:00] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 304 0
+[03/Sep/2019 09:27:00] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 304 0
+[03/Sep/2019 09:27:00] "GET /static/material/js/jquery.formset.js HTTP/1.1" 304 0
+[03/Sep/2019 09:27:00] "GET /static/material/js/materialize.js HTTP/1.1" 304 0
+[03/Sep/2019 09:27:00] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 304 0
+[03/Sep/2019 09:27:00] "GET /static/material/css/materialize.forms.css HTTP/1.1" 304 0
+[03/Sep/2019 09:27:00] "GET /static/material/js/materialize.forms.js HTTP/1.1" 304 0
+[03/Sep/2019 09:27:00] "GET /static/material/css/materialize.css HTTP/1.1" 304 0
+[03/Sep/2019 09:27:01] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 304 0
+[03/Sep/2019 09:27:18] "POST /login/ HTTP/1.1" 302 0
+[03/Sep/2019 09:27:18] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:27:18] "GET /media/nav_buttons/home.svg HTTP/1.1" 200 1623
+[03/Sep/2019 09:27:18] "GET /media/nav_buttons/inbox.png HTTP/1.1" 200 496
+[03/Sep/2019 09:27:18] "GET /media/nav_buttons/post.svg HTTP/1.1" 200 4752
+[03/Sep/2019 09:27:18] "GET /media/nav_buttons/search.png HTTP/1.1" 200 907
+[03/Sep/2019 09:27:19] "GET /media/nav_buttons/notifications.svg HTTP/1.1" 200 3052
+[03/Sep/2019 09:27:19] "GET /media/nav_buttons/profile.svg HTTP/1.1" 200 515
+[03/Sep/2019 09:27:31] "GET /messages/inbox/ HTTP/1.1" 200 3888
+[03/Sep/2019 09:27:34] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:27:43] "GET /search/?q=levert.o HTTP/1.1" 200 3886
+[03/Sep/2019 09:27:45] "GET /search/?q=levert.o HTTP/1.1" 200 3886
+[03/Sep/2019 09:27:48] "GET /search/?q=levert.o HTTP/1.1" 200 3886
+[03/Sep/2019 09:27:51] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:27:53] "GET /user/peterzernia HTTP/1.1" 301 0
+Not Found: /user/peterzernia/
+[03/Sep/2019 09:27:53] "GET /user/peterzernia/ HTTP/1.1" 404 1751
+[03/Sep/2019 09:28:13] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:28:16] "GET /user/masaazapomporompom/ HTTP/1.1" 200 4516
+[03/Sep/2019 09:28:16] "GET /media/default.jpg HTTP/1.1" 200 5153
+[03/Sep/2019 09:28:20] "GET /edit_profile/ HTTP/1.1" 200 5795
+[03/Sep/2019 09:38:50] "GET /edit_profile/ HTTP/1.1" 200 5795
+[03/Sep/2019 09:38:50] "GET /media/default.jpg HTTP/1.1" 304 0
+[03/Sep/2019 09:38:50] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 304 0
+[03/Sep/2019 09:38:50] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 304 0
+[03/Sep/2019 09:38:50] "GET /static/material/js/jquery.formset.js HTTP/1.1" 304 0
+[03/Sep/2019 09:38:50] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 304 0
+[03/Sep/2019 09:38:51] "GET /static/material/js/materialize.js HTTP/1.1" 304 0
+[03/Sep/2019 09:38:51] "GET /static/material/js/materialize.forms.js HTTP/1.1" 304 0
+[03/Sep/2019 09:38:51] "GET /static/material/css/materialize.forms.css HTTP/1.1" 304 0
+[03/Sep/2019 09:38:51] "GET /static/material/css/materialize.css HTTP/1.1" 304 0
+[03/Sep/2019 09:38:51] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 304 0
+[03/Sep/2019 09:39:57] "GET / HTTP/1.1" 200 3979
+Not Found: /user/peterzernia/
+[03/Sep/2019 09:40:00] "GET /user/peterzernia/ HTTP/1.1" 404 1751
+Not Found: /user/peterzernia/
+[03/Sep/2019 09:40:24] "GET /user/peterzernia/ HTTP/1.1" 404 1751
+Not Found: /user/peterzernia/
+[03/Sep/2019 09:40:35] "GET /user/peterzernia/ HTTP/1.1" 404 1751
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 09:42:48
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 09:45:52
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[03/Sep/2019 09:45:56] "GET /user/peterzernia/ HTTP/1.1" 404 77
+[03/Sep/2019 09:46:05] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:46:05] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:06] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:09] "GET /search HTTP/1.1" 301 0
+[03/Sep/2019 09:46:09] "GET /search/ HTTP/1.1" 200 3858
+[03/Sep/2019 09:46:09] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:09] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:09] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:09] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:09] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:09] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:10] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:10] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:10] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:10] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:10] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:11] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:11] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:11] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:11] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:11] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:11] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /search/?q=levert.o HTTP/1.1" 200 3886
+[03/Sep/2019 09:46:16] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:16] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:17] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:17] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:17] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:17] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53213)
+[03/Sep/2019 09:46:17] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 09:46:20] "GET /search/?q=levert.o HTTP/1.1" 200 3886
+[03/Sep/2019 09:46:20] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:20] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:21] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:21] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:46:22] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:22] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:23] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:23] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:23] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:23] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:23] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:46:23] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53212)
+[03/Sep/2019 09:46:23] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+[03/Sep/2019 09:46:24] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 09:46:27] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:27] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:27] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:27] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:46:27] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+Performing system checks...
+
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$   python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 09:48:45
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[03/Sep/2019 09:48:53] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:48:53] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:53] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:53] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:53] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:48:53] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:53] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:48:53] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:48:53] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:53] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:48:54] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:49:18] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:49:18] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:18] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:18] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:18] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:18] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:49:18] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:19] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:19] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:49:19] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:49:19] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:49:19] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:20] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:20] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:49:20] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:49:20] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:49:20] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:49:20] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53304)
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 09:52:13] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:52:13] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:52:13] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:52:13] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:52:13] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:52:13] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:52:13] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53409)
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+[03/Sep/2019 09:52:13] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 09:52:14] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:52:14] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 09:52:14] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:52:14] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:52:14] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:52:14] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53412)
+[03/Sep/2019 09:52:14] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 09:55:12] "GET /user/masaazapomporompom/ HTTP/1.1" 200 4516
+[03/Sep/2019 09:55:12] "GET /media/default.jpg HTTP/1.1" 404 77
+[03/Sep/2019 09:55:12] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 09:55:12] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:55:12] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:55:12] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53501)
+[03/Sep/2019 09:55:12] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+Traceback (most recent call last):
+[03/Sep/2019 09:55:13] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+[03/Sep/2019 09:55:13] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+----------------------------------------
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+[03/Sep/2019 09:55:13] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+Exception happened during processing of request from ('127.0.0.1', 53503)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+[03/Sep/2019 09:55:13] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+[03/Sep/2019 09:55:13] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+[03/Sep/2019 09:55:13] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+----------------------------------------
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+Exception happened during processing of request from ('127.0.0.1', 53506)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+[03/Sep/2019 09:55:13] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+----------------------------------------
+[03/Sep/2019 09:55:13] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+Traceback (most recent call last):
+[03/Sep/2019 09:55:13] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+[03/Sep/2019 09:55:13] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 09:55:14] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:55:14] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:59:24] "GET / HTTP/1.1" 200 3979
+[03/Sep/2019 09:59:24] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 09:59:24] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:59:24] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:59:24] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 09:59:24] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:59:24] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:59:24] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+----------------------------------------
+[03/Sep/2019 09:59:24] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+Exception happened during processing of request from ('127.0.0.1', 53562)
+[03/Sep/2019 09:59:24] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+[03/Sep/2019 09:59:24] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+[03/Sep/2019 09:59:25] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+[03/Sep/2019 09:59:25] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 09:59:25] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 09:59:25] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 09:59:25] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 09:59:25] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 09:59:25] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$   python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 10:03:41
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[03/Sep/2019 10:05:54] "GET / HTTP/1.1" 200 3993
+[03/Sep/2019 10:05:54] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:54] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:05:55] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:05:55] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 10:05:55] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 10:05:55] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53825)
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 10:06:04] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:04] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:04] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:04] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:04] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /user/masaazapomporompom HTTP/1.1" 301 0
+[03/Sep/2019 10:06:06] "GET /user/masaazapomporompom/ HTTP/1.1" 200 4516
+[03/Sep/2019 10:06:06] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /media/default.jpg HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 10:06:06] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:07] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:07] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:07] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:06:07] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 53823)
+[03/Sep/2019 10:06:07] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+[03/Sep/2019 10:06:08] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+[03/Sep/2019 10:06:08] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$  python manage.py migrate photos
+CommandError: App 'photos' does not have migrations.
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ python manage.py makemigrations
+No changes detected
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$  python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, direct_messages, photo_blog, sessions, users
+Running migrations:
+  No migrations to apply.
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git log
+commit c22629d8c551b29f16796bf4919018244b987203 (HEAD -> master)
+Author: Levert <levertco@gmail.com>
+Date:   Sat Jul 27 15:00:04 2019 +0300
+
+    deployment to heroku
+                                                                                                                                                                          hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 10:35:18
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[03/Sep/2019 10:36:17] "GET / HTTP/1.1" 200 3993
+[03/Sep/2019 10:36:17] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:36:17] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:36:17] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:36:17] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:36:17] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:36:50] "GET / HTTP/1.1" 200 3993
+[03/Sep/2019 10:36:50] "GET /static/photo_blog/jquery.waypoints.min.js HTTP/1.1" 404 77
+[03/Sep/2019 10:36:50] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 404 77
+[03/Sep/2019 10:36:51] "GET /static/photo_blog/main.css HTTP/1.1" 404 77
+[03/Sep/2019 10:36:51] "GET /media/logo.png HTTP/1.1" 404 77
+[03/Sep/2019 10:36:51] "GET /media/nav_buttons/inbox.png HTTP/1.1" 404 77
+[03/Sep/2019 10:36:56] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 10:36:56] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:36:56] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 10:36:56] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 10:36:56] "GET /webpage HTTP/1.1" 404 77
+[03/Sep/2019 10:36:56] "GET / HTTP/1.1" 200 3993
+[03/Sep/2019 10:36:56] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54784)
+[03/Sep/2019 10:36:56] "GET /static/photo_blog/buttons.js HTTP/1.1" 404 77
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+[03/Sep/2019 10:36:56] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+[03/Sep/2019 10:36:56] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+[03/Sep/2019 10:36:56] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+----------------------------------------
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+[03/Sep/2019 10:36:56] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+[03/Sep/2019 10:36:56] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+Exception happened during processing of request from ('127.0.0.1', 54787)
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+Exception happened during processing of request from ('127.0.0.1', 54795)
+----------------------------------------
+----------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+[03/Sep/2019 10:36:56] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+[03/Sep/2019 10:36:56] "GET /static/photo_blog/jquery.waypoints.min.js HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+[03/Sep/2019 10:36:56] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+[03/Sep/2019 10:36:57] "GET / HTTP/1.1" 500 59
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+----------------------------------------
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Exception happened during processing of request from ('127.0.0.1', 54763)
+[03/Sep/2019 10:36:57] "GET /static/material/js/jquery.formset.js HTTP/1.1" 500 59
+----------------------------------------
+----------------------------------------
+[03/Sep/2019 10:36:57] "GET /static/material/js/materialize.forms.js HTTP/1.1" 500 59
+Exception happened during processing of request from ('127.0.0.1', 54760)
+----------------------------------------
+[03/Sep/2019 10:36:57] "GET /webpage HTTP/1.1" 500 59
+Exception happened during processing of request from ('127.0.0.1', 54762)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+[03/Sep/2019 10:36:57] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54764)
+[03/Sep/2019 10:36:57] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 404 77
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 141, in run
+    self.handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+Traceback (most recent call last):
+[03/Sep/2019 10:36:58] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 500 59
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 116, in handle_error
+    super().handle_error()
+
+During handling of the above exception, another exception occurred:
+
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 141, in run
+    self.handle_error()
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 141, in run
+    self.handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54759)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 368, in handle_error
+    self.finish_response()
+Traceback (most recent call last):
+[03/Sep/2019 10:36:58] "GET /media/nav_buttons/post.svg HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+[03/Sep/2019 10:36:58] "GET /media/nav_buttons/home.svg HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+[03/Sep/2019 10:36:58] "GET /static/material/js/materialize.js HTTP/1.1" 500 59
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+Exception happened during processing of request from ('127.0.0.1', 54761)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+
+During handling of the above exception, another exception occurred:
+
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+[03/Sep/2019 10:36:58] "GET /media/nav_buttons/profile.svg HTTP/1.1" 404 77
+
+During handling of the above exception, another exception occurred:
+
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 141, in run
+    self.handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 116, in handle_error
+    super().handle_error()
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 368, in handle_error
+    self.finish_response()
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 144, in run
+    self.close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 111, in close
+    super().close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 144, in run
+    self.close()
+AttributeError: 'NoneType' object has no attribute 'split'
+[03/Sep/2019 10:36:58] "GET /media/nav_buttons/notifications.svg HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 141, in run
+    self.handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 116, in handle_error
+    super().handle_error()
+[03/Sep/2019 10:36:58] "GET /media/nav_buttons/search.png HTTP/1.1" 404 77
+----------------------------------------
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 111, in close
+    super().close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+
+During handling of the above exception, another exception occurred:
+
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 141, in run
+    self.handle_error()
+[03/Sep/2019 10:36:58] "GET /static/photo_blog/main.css HTTP/1.1" 404 77
+
+During handling of the above exception, another exception occurred:
+
+AttributeError: 'NoneType' object has no attribute 'split'
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+TypeError: 'NoneType' object is not subscriptable
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 144, in run
+    self.close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 111, in close
+    super().close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+[03/Sep/2019 10:37:01] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+----------------------------------------
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+[03/Sep/2019 10:37:01] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+
+During handling of the above exception, another exception occurred:
+
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+AttributeError: 'NoneType' object has no attribute 'split'
+Traceback (most recent call last):
+Traceback (most recent call last):
+----------------------------------------
+[03/Sep/2019 10:37:01] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 144, in run
+    self.close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+[03/Sep/2019 10:37:01] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 144, in run
+    self.close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 111, in close
+    super().close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+[03/Sep/2019 10:37:01] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 111, in close
+    super().close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 144, in run
+    self.close()
+----------------------------------------
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 111, in close
+    super().close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+----------------------------------------
+AttributeError: 'NoneType' object has no attribute 'split'
+[03/Sep/2019 10:37:01] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:37:02] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+----------------------------------------
+[03/Sep/2019 10:37:02] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 10:37:02] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:00] "GET / HTTP/1.1" 302 0
+[03/Sep/2019 10:41:01] "GET /login/?next=/ HTTP/1.1" 200 3177
+[03/Sep/2019 10:41:01] "GET /static/photo_blog/buttons.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:01] "GET /static/photo_blog/jquery.waypoints.min.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:01] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:01] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:01] "GET /static/photo_blog/main.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:01] "GET /media/logo.png HTTP/1.1" 404 77
+[03/Sep/2019 10:41:01] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:01] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:01] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:02] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:02] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:02] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:02] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:02] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:02] "GET /static/photo_blog/buttons.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:03] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:03] "GET /static/photo_blog/main.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:03] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:03] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:04] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:04] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:04] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:05] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:05] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:05] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /login/?next=/ HTTP/1.1" 200 3177
+[03/Sep/2019 10:41:11] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/photo_blog/jquery.waypoints.min.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/photo_blog/buttons.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/photo_blog/main.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /media/logo.png HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/photo_blog/main.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:11] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:12] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:12] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:12] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:13] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 10:41:13] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:13] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 10:41:13] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+Logging in... done
+Logged in as levertco@gmail.com
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+Creating ⬢ mtr1bune... -
+Creating ⬢ mtr1bune... !
+ !    Name mtr1bune is already taken
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku addons:create heroku-postgresql:hobby-dev
+ »   Error: Missing required flag:
+ »     -a, --app APP  app to run command against
+ »   See more help with --help
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+Creating ⬢ levertsinstagram... -
+Creating ⬢ levertsinstagram... done
+https://levertsinstagram.herokuapp.com/ | https://git.heroku.com/levertsinstagram.git
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku addons:create heroku-postgresql:hobby-dev
+ »   Error: Missing required flag:
+ »     -a, --app APP  app to run command against
+ »   See more help with --help
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$  git push heroku master
+fatal: 'heroku' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git init
+Initialized empty Git repository in C:/Users/hp/Desktop/django/tests/insta sure b/.git/
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku git:remote -a levertsinstagram
+set git remote heroku to https://git.heroku.com/levertsinstagram.git
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/admin.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/apps.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/migrations/0001_initial.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/models.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/templates/direct_messages/directmessage_confirm_delete.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/templates/direct_messages/directmessage_detail.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/templates/direct_messages/directmessage_form.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/templates/direct_messages/inbox.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/templates/direct_messages/thread.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/tests.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/urls.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in direct_messages/views.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in manage.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in petsygram/settings.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in petsygram/urls.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in petsygram/wsgi.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/admin.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/apps.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/migrations/0001_initial.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/migrations/0002_auto_20181018_1240.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/migrations/0003_auto_20181023_0942.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/migrations/0004_auto_20181023_0943.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/models.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/signals.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/base.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/comment_confirm_delete.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/comment_form.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/home.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/notifications.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/post_confirm_delete.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/post_detail.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/post_form.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/post_likes.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/search.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templates/photo_blog/user_profile.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/templatetags/photo_blog_tags.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/tests.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/urls.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in photo_blog/views.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in requirements.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in static/photo_blog/buttons.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in static/photo_blog/infinite.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in static/photo_blog/jquery.waypoints.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in static/photo_blog/main.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/admin.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/apps.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/forms.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/migrations/0001_initial.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/models.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/signals.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/edit_profile.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/login.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/logout.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/password_reset.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/password_reset_complete.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/password_reset_confirm.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/password_reset_done.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/register.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/templates/users/user_followers.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/tests.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/urls.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in users/views.py.
+The file will have its original line endings in your working directory
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git commit -am "make it better"
+[master (root-commit) fb72996] make it better
+ 71 files changed, 2076 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 direct_messages/__init__.py
+ create mode 100644 direct_messages/admin.py
+ create mode 100644 direct_messages/apps.py
+ create mode 100644 direct_messages/migrations/0001_initial.py
+ create mode 100644 direct_messages/migrations/__init__.py
+ create mode 100644 direct_messages/models.py
+ create mode 100644 direct_messages/templates/direct_messages/directmessage_confirm_delete.html
+ create mode 100644 direct_messages/templates/direct_messages/directmessage_detail.html
+ create mode 100644 direct_messages/templates/direct_messages/directmessage_form.html
+ create mode 100644 direct_messages/templates/direct_messages/inbox.html
+ create mode 100644 direct_messages/templates/direct_messages/thread.html
+ create mode 100644 direct_messages/tests.py
+ create mode 100644 direct_messages/urls.py
+ create mode 100644 direct_messages/views.py
+ create mode 100644 manage.py
+ create mode 100644 petsygram/__init__.py
+ create mode 100644 petsygram/settings.py
+ create mode 100644 petsygram/urls.py
+ create mode 100644 petsygram/wsgi.py
+ create mode 100644 photo_blog/__init__.py
+ create mode 100644 photo_blog/admin.py
+ create mode 100644 photo_blog/apps.py
+ create mode 100644 photo_blog/migrations/0001_initial.py
+ create mode 100644 photo_blog/migrations/0002_auto_20181018_1240.py
+ create mode 100644 photo_blog/migrations/0003_auto_20181023_0942.py
+ create mode 100644 photo_blog/migrations/0004_auto_20181023_0943.py
+ create mode 100644 photo_blog/migrations/__init__.py
+ create mode 100644 photo_blog/models.py
+ create mode 100644 photo_blog/signals.py
+ create mode 100644 photo_blog/templates/photo_blog/base.html
+ create mode 100644 photo_blog/templates/photo_blog/comment_confirm_delete.html
+ create mode 100644 photo_blog/templates/photo_blog/comment_form.html
+ create mode 100644 photo_blog/templates/photo_blog/home.html
+ create mode 100644 photo_blog/templates/photo_blog/notifications.html
+ create mode 100644 photo_blog/templates/photo_blog/post_confirm_delete.html
+ create mode 100644 photo_blog/templates/photo_blog/post_detail.html
+ create mode 100644 photo_blog/templates/photo_blog/post_form.html
+ create mode 100644 photo_blog/templates/photo_blog/post_likes.html
+ create mode 100644 photo_blog/templates/photo_blog/search.html
+ create mode 100644 photo_blog/templates/photo_blog/user_profile.html
+ create mode 100644 photo_blog/templatetags/__init__.py
+ create mode 100644 photo_blog/templatetags/photo_blog_tags.py
+ create mode 100644 photo_blog/tests.py
+ create mode 100644 photo_blog/urls.py
+ create mode 100644 photo_blog/views.py
+ create mode 100644 requirements.txt
+ create mode 100644 static/photo_blog/buttons.js
+ create mode 100644 static/photo_blog/infinite.min.js
+ create mode 100644 static/photo_blog/jquery.waypoints.min.js
+ create mode 100644 static/photo_blog/main.css
+ create mode 100644 users/__init__.py
+ create mode 100644 users/admin.py
+ create mode 100644 users/apps.py
+ create mode 100644 users/forms.py
+ create mode 100644 users/migrations/0001_initial.py
+ create mode 100644 users/migrations/__init__.py
+ create mode 100644 users/models.py
+ create mode 100644 users/signals.py
+ create mode 100644 users/templates/users/edit_profile.html
+ create mode 100644 users/templates/users/login.html
+ create mode 100644 users/templates/users/logout.html
+ create mode 100644 users/templates/users/password_reset.html
+ create mode 100644 users/templates/users/password_reset_complete.html
+ create mode 100644 users/templates/users/password_reset_confirm.html
+ create mode 100644 users/templates/users/password_reset_done.html
+ create mode 100644 users/templates/users/register.html
+ create mode 100644 users/templates/users/user_followers.html
+ create mode 100644 users/tests.py
+ create mode 100644 users/urls.py
+ create mode 100644 users/views.py
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git push heroku master
+Enumerating objects: 82, done.
+Counting objects: 100% (82/82), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (77/77), done.
+Writing objects: 100% (82/82), 28.99 KiB | 82.00 KiB/s, done.
+Total 82 (delta 15), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Python app detected
+remote: -----> Installing python-3.6.8
+remote: -----> Installing pip
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting dj-database-url==0.5.0 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 1))
+remote:          Downloading https://files.pythonhosted.org/packages/d4/a6/4b8578c1848690d0c307c7c0596af2077536c9ef2a04d42b00fabaa7e49d/dj_database_url-0.5.0-py2.py3-none-any.whl
+remote:        Collecting Django==2.1.7 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 2))
+remote:          Downloading https://files.pythonhosted.org/packages/c7/87/fbd666c4f87591ae25b7bb374298e8629816e87193c4099d3608ef11fab9/Django-2.1.7-py3-none-any.whl (7.3MB)
+remote:        Collecting django-material==1.3.0 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 3))
+remote:          Downloading https://files.pythonhosted.org/packages/7d/88/ad92f547e0607a12736ab62b76e0a59da607085682350466269e0baec874/django_material-1.3.0-py2.py3-none-any.whl (7.1MB)
+remote:        Collecting djangorestframework==3.8.2 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 4))
+remote:          Downloading https://files.pythonhosted.org/packages/90/30/ad1148098ff0c375df2a30cc4494ed953cf7551fc1ecec30fc951c712d20/djangorestframework-3.8.2-py2.py3-none-any.whl (923kB)
+remote:        Collecting gunicorn==19.9.0 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 5))
+remote:          Downloading https://files.pythonhosted.org/packages/8c/da/b8dd8deb741bff556db53902d4706774c8e1e67265f69528c14c003644e6/gunicorn-19.9.0-py2.py3-none-any.whl (112kB)
+remote:        Collecting Pillow==5.3.0 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 6))
+remote:          Downloading https://files.pythonhosted.org/packages/62/94/5430ebaa83f91cc7a9f687ff5238e26164a779cca2ef9903232268b0a318/Pillow-5.3.0-cp36-cp36m-manylinux1_x86_64.whl (2.0MB)
+remote:        Collecting psycopg2==2.7.5 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 7))
+remote:          Downloading https://files.pythonhosted.org/packages/5e/d0/9e2b3ed43001ebed45caf56d5bb9d44ed3ebd68e12b87845bfa7bcd46250/psycopg2-2.7.5-cp36-cp36m-manylinux1_x86_64.whl (2.7MB)
+remote:        Collecting pytz==2018.5 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 8))
+remote:          Downloading https://files.pythonhosted.org/packages/30/4e/27c34b62430286c6d59177a0842ed90dc789ce5d1ed740887653b898779a/pytz-2018.5-py2.py3-none-any.whl (510kB)
+remote:        Collecting whitenoise==4.1 (from -r /tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/requirements.txt (line 9))
+remote:          Downloading https://files.pythonhosted.org/packages/07/2e/c77e71cb448f1a507bc2dfec1d5c24e35d14a737837bea6cdfd6d1ff66bd/whitenoise-4.1-py2.py3-none-any.whl
+remote:        Installing collected packages: dj-database-url, pytz, Django, django-material, djangorestframework, gunicorn, Pillow, psycopg2, whitenoise
+remote:        Successfully installed Django-2.1.7 Pillow-5.3.0 dj-database-url-0.5.0 django-material-1.3.0 djangorestframework-3.8.2 gunicorn-19.9.0 psycopg2-2.7.5 pytz-2018.5 whitenoise-4.1
+remote:
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        260 static files copied to '/tmp/build_d4d3fc044a4c7e89fe1947d861dc0299/staticfiles'.
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types -> (none)
+remote:
+remote: -----> Compressing...
+remote:        Done: 68.6M
+remote: -----> Launching...
+remote:        Released v5
+remote:        https://levertsinstagram.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/levertsinstagram.git
+ * [new branch]      master -> master
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku logs --tail
+(node:12888) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+2019-09-03T07:54:19.906420+00:00 app[api]: Initial release by user levertco@gmail.com
+2019-09-03T07:54:19.906420+00:00 app[api]: Release v1 created by user levertco@gmail.com
+2019-09-03T07:54:20.096902+00:00 app[api]: Release v2 created by user levertco@gmail.com
+2019-09-03T07:54:20.096902+00:00 app[api]: Enable Logplex by user levertco@gmail.com
+2019-09-03T07:57:55.000000+00:00 app[api]: Build started by user levertco@gmail.com
+2019-09-03T07:58:36.689926+00:00 app[api]: Deploy fb729962 by user levertco@gmail.com
+2019-09-03T07:58:36.689926+00:00 app[api]: Release v5 created by user levertco@gmail.com
+2019-09-03T07:58:36.432687+00:00 app[api]: Running release v3 commands by user levertco@gmail.com
+2019-09-03T07:58:36.446545+00:00 app[api]: Release v4 created by user levertco@gmail.com
+2019-09-03T07:58:36.432687+00:00 app[api]: Attach DATABASE (@ref:postgresql-pointy-70229) by user levertco@gmail.com
+2019-09-03T07:58:36.446545+00:00 app[api]: @ref:postgresql-pointy-70229 completed provisioning, setting DATABASE_URL. by user levertco@gmail.com
+2019-09-03T07:58:47.000000+00:00 app[api]: Build succeeded
+2019-09-03T08:01:27.043281+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=levertsinstagram.herokuapp.com request_id=e0aba370-c5ff-4da7-b3df-6571fa3aab9a fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
+2019-09-03T08:01:28.203531+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=levertsinstagram.herokuapp.com request_id=5cce21e5-4545-4b65-b578-f2d23692db24 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
+2019-09-03T08:04:02.006166+00:00 app[api]: Rollback to v3 by user levertco@gmail.com
+2019-09-03T08:04:02.006166+00:00 app[api]: Release v6 created by user levertco@gmail.com
+2019-09-03T08:04:50.669935+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=levertsinstagram.herokuapp.com request_id=9ac9fd4f-78fd-494e-b481-fa3ba353c247 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
+2019-09-03T08:04:51.153047+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=levertsinstagram.herokuapp.com request_id=2a238a8e-5fe9-40a8-8391-ad94fcd7def0 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku logs --tail
+(node:528) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+2019-09-03T07:54:19.906420+00:00 app[api]: Initial release by user levertco@gmail.com
+2019-09-03T07:54:19.906420+00:00 app[api]: Release v1 created by user levertco@gmail.com
+2019-09-03T07:54:20.096902+00:00 app[api]: Release v2 created by user levertco@gmail.com
+2019-09-03T07:54:20.096902+00:00 app[api]: Enable Logplex by user levertco@gmail.com
+2019-09-03T07:57:55.000000+00:00 app[api]: Build started by user levertco@gmail.com
+2019-09-03T07:58:36.689926+00:00 app[api]: Deploy fb729962 by user levertco@gmail.com
+2019-09-03T07:58:36.689926+00:00 app[api]: Release v5 created by user levertco@gmail.com
+2019-09-03T07:58:36.432687+00:00 app[api]: Running release v3 commands by user levertco@gmail.com
+2019-09-03T07:58:36.446545+00:00 app[api]: Release v4 created by user levertco@gmail.com
+2019-09-03T07:58:36.432687+00:00 app[api]: Attach DATABASE (@ref:postgresql-pointy-70229) by user levertco@gmail.com
+2019-09-03T07:58:36.446545+00:00 app[api]: @ref:postgresql-pointy-70229 completed provisioning, setting DATABASE_URL. by user levertco@gmail.com
+2019-09-03T07:58:47.000000+00:00 app[api]: Build succeeded
+2019-09-03T08:01:27.043281+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=levertsinstagram.herokuapp.com request_id=e0aba370-c5ff-4da7-b3df-6571fa3aab9a fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
+2019-09-03T08:01:28.203531+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=levertsinstagram.herokuapp.com request_id=5cce21e5-4545-4b65-b578-f2d23692db24 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
+2019-09-03T08:04:02.006166+00:00 app[api]: Rollback to v3 by user levertco@gmail.com
+2019-09-03T08:04:02.006166+00:00 app[api]: Release v6 created by user levertco@gmail.com
+2019-09-03T08:04:50.669935+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=levertsinstagram.herokuapp.com request_id=9ac9fd4f-78fd-494e-b481-fa3ba353c247 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
+2019-09-03T08:04:51.153047+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=levertsinstagram.herokuapp.com request_id=2a238a8e-5fe9-40a8-8391-ad94fcd7def0 fwd="105.27.206.46" dyno= connect= service= status=503 bytes= protocol=https
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku restart                                                                                                                                                            Restarting dynos on ⬢ levertsinstagram... -
+Restarting dynos on ⬢ levertsinstagram... done
+                                                                                                                                                                            hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)                                                                                                              $ git remote -v                                                                                                                                                             heroku  https://git.heroku.com/levertsinstagram.git (fetch)
+heroku  https://git.heroku.com/levertsinstagram.git (push)
+                                                                                                                                                                            hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git shortlog -s
+     1  Levert
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git push heroku master
+Everything up-to-date
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ ls
+db.sqlite3  direct_messages/  manage.py*  media/  petsygram/  photo_blog/  requirements.txt  static/  users/
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ pip freeze
+alembic==1.0.3
+app==0.0.1
+blinker==1.4
+bootstrap4==0.1.0
+certifi==2019.6.16
+chardet==3.0.4
+Click==7.0
+config==0.4.0
+config-py==0.1.1
+coverage==4.5.3
+decorator==4.0.11
+dj-database-url==0.5.0
+Django==2.1.7
+django-bootstrap3==11.0.0
+django-bootstrap4==0.0.7
+django-heroku==0.3.1
+django-material==1.3.0
+djangorestframework==3.8.2
+dominate==2.3.4
+Flask==1.0.2
+Flask-Bootstrap==3.3.7.1
+Flask-Login==0.4.1
+Flask-Mail==0.9.1
+Flask-Migrate==2.3.0
+Flask-Script==2.0.6
+Flask-SimpleMDE==0.3.0
+Flask-SQLAlchemy==2.3.2
+Flask-Uploads==0.2.1
+Flask-WTF==0.14.2
+gunicorn==19.9.0
+hupper==1.8.1
+idna==2.8
+imageio==2.1.2
+InstagramAPI==1.0.2
+itsdangerous==1.1.0
+Jinja2==2.10
+Mako==1.0.7
+markdown2==2.3.8
+MarkupSafe==1.1.0
+mock==3.0.5
+moviepy==0.2.3.2
+mysql-connector-python==8.0.17
+mysqlclient==1.4.2.post1
+numpy==1.17.1
+PasteDeploy==2.0.1
+php==1.2.0
+Pillow==5.3.0
+plaster==1.0
+plaster-pastedeploy==0.7
+polls==0.1
+protobuf==3.9.0
+psycopg2==2.7.5
+pyperclip==1.7.0
+pypiwin32==223
+pyramid==1.10.4
+python-dateutil==2.7.5
+python-decouple==3.1
+python-editor==1.0.3
+python-embedded-launcher==0.12
+python-vlc==3.0.7110
+pytz==2018.5
+pywin32==224
+requests==2.11.1
+requests-toolbelt==0.7.0
+six==1.11.0
+SQLAlchemy==1.2.14
+sqlparse==0.3.0
+tqdm==4.11.2
+translationstring==1.3
+urllib3==1.25.3
+venusian==1.2.0
+virtualenv==16.6.2
+virtualenvwrapper-win==1.2.5
+visitor==0.1.3
+WebOb==1.8.5
+Werkzeug==0.14.1
+whitenoise==4.1
+win10toast==0.9
+WTForms==2.2.1
+zope.deprecation==4.4.0
+zope.interface==4.6.0
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ ls
+db.sqlite3  direct_messages/  manage.py*  media/  petsygram/  photo_blog/  requirements.txt  static/  users/
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ python manage.py runserver                                                                                                                                                Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 13:13:34
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[03/Sep/2019 13:13:44] "GET / HTTP/1.1" 200 3993
+[03/Sep/2019 13:13:44] "GET /static/photo_blog/buttons.js HTTP/1.1" 404 77
+[03/Sep/2019 13:13:44] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+[03/Sep/2019 13:13:44] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 13:13:44] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 404 77
+[03/Sep/2019 13:13:45] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 13:13:45] "GET /static/photo_blog/jquery.waypoints.min.js HTTP/1.1" 404 77
+----------------------------------------
+[03/Sep/2019 13:13:45] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 404 77
+Exception happened during processing of request from ('127.0.0.1', 61024)
+[03/Sep/2019 13:13:45] "GET /static/photo_blog/main.css HTTP/1.1" 404 77
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+[03/Sep/2019 13:13:45] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+[03/Sep/2019 13:13:45] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+[03/Sep/2019 13:13:45] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 404 77
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+[03/Sep/2019 13:13:45] "GET /static/material/css/materialize.css HTTP/1.1" 404 77
+[03/Sep/2019 13:13:45] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 13:13:45] "GET /media/nav_buttons/notifications.svg HTTP/1.1" 404 77
+[03/Sep/2019 13:13:46] "GET /media/nav_buttons/home.svg HTTP/1.1" 404 77
+[03/Sep/2019 13:13:46] "GET /media/nav_buttons/inbox.png HTTP/1.1" 404 77
+[03/Sep/2019 13:13:46] "GET /media/logo.png HTTP/1.1" 404 77
+[03/Sep/2019 13:13:46] "GET /media/nav_buttons/post.svg HTTP/1.1" 404 77
+[03/Sep/2019 13:13:46] "GET /media/nav_buttons/search.png HTTP/1.1" 404 77
+[03/Sep/2019 13:13:46] "GET /static/material/css/materialize.forms.css HTTP/1.1" 404 77
+[03/Sep/2019 13:13:46] "GET /media/nav_buttons/profile.svg HTTP/1.1" 404 77
+[03/Sep/2019 13:13:47] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+[03/Sep/2019 13:13:47] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 13:13:47] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 404 77
+[03/Sep/2019 13:13:47] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 404 77
+[03/Sep/2019 13:13:47] "GET /static/material/js/jquery.formset.js HTTP/1.1" 404 77
+[03/Sep/2019 13:13:47] "GET /static/material/js/materialize.js HTTP/1.1" 404 77
+[03/Sep/2019 13:13:47] "GET /static/material/js/materialize.forms.js HTTP/1.1" 404 77
+
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku ps:scale web=1
+Scaling dynos... -
+Scaling dynos... !
+ !    Couldn't find that process type (web).
+                                                                                                                                                                            hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)                                                                                                              $  pip install gunicorn                                                                                                                                                     Requirement already satisfied: gunicorn in c:\users\hp\appdata\local\programs\python\python36\lib\site-packages (19.9.0)
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku ps:scale
+(node:1796) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+ !    No process types on ⬢ levertsinstagram.
+ !    Upload a Procfile to add process types.
+ !    https://devcenter.heroku.com/articles/procfile
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$  ls
+db.sqlite3  direct_messages/  manage.py*  media/  petsygram/  photo_blog/  requirements.txt  static/  users/
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ ls
+db.sqlite3  direct_messages/  manage.py*  media/  petsygram/  photo_blog/  Procfile  requirements.txt  static/  users/
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git add .
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git commit -m "procfile"
+[master 143e253] procfile
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Procfile
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git push heroku master                                                                                                                                                    Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 10.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Python app detected
+remote: -----> Installing requirements with pip
+remote:
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        /app/.heroku/python/lib/python3.6/site-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+remote:          """)
+remote:        260 static files copied to '/tmp/build_4fe65472714aea3dbb22e160c2dbf2bb/staticfiles'.
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 68.7M
+remote: -----> Launching...
+remote:        Released v7
+remote:        https://levertsinstagram.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/levertsinstagram.git
+   fb72996..143e253  master -> master
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ heroku ps:scale                                                                                                                                                           (node:5448) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+web=1:Free
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ pip install psycopg2-binary                                                                                                                                               Collecting psycopg2-binary
+  Downloading https://files.pythonhosted.org/packages/74/bb/e751bd60557577839ac2f0820a1755856c62457fc2764f5c46a8d91442b2/psycopg2_binary-2.8.3-cp36-cp36m-win_amd64.whl (1.1MB)
+     |████████████████████████████████| 1.1MB 234kB/s
+Installing collected packages: psycopg2-binary
+Successfully installed psycopg2-binary-2.8.3
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git add .
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git commit -m "procfi"
+On branch master
+nothing to commit, working tree clean
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git push heroku master
+Everything up-to-date
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ python manage.py runserver                                                                                                                                                Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 13:30:03
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Traceback (most recent call last):
+  File "manage.py", line 15, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\management\__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\management\__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\management\__init__.py", line 224, in fetch_command
+    klass = load_command_class(app_name, subcommand)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\management\__init__.py", line 36, in load_command_class
+    module = import_module('%s.management.commands.%s' % (app_name, name))
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\contrib\staticfiles\management\commands\runserver.py", line 2, in <module>
+    from django.contrib.staticfiles.handlers import StaticFilesHandler
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\contrib\staticfiles\handlers.py", line 6, in <module>
+    from django.contrib.staticfiles.views import serve
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 764, in get_code
+  File "<frozen importlib._bootstrap_external>", line 832, in get_data
+KeyboardInterrupt
+
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git add .                                                                                                                                                  warning: LF will be replaced by CRLF in petsygram/settings.py.
+The file will have its original line endings in your working directory
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git add .
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git commit -m"deployment"
+[master 8247fd7] deployment
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$ git push heroku master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 374 bytes | 124.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Python app detected
+remote: -----> Installing requirements with pip
+remote:
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        /app/.heroku/python/lib/python3.6/site-packages/psycopg2/__init__.py:144: UserWarning: The psycopg2 wheel package will be renamed from release 2.8; in order to keep installing from binary please use "pip install psycopg2-binary" instead. For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+remote:          """)
+remote:        260 static files copied to '/tmp/build_9e3a5bce81969b356e572d09884c5cd2/staticfiles'.
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 68.7M
+remote: -----> Launching...
+remote:        Released v8
+remote:        https://levertsinstagram.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/levertsinstagram.git
+   143e253..8247fd7  master -> master
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$  python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 13:36:49
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[03/Sep/2019 13:37:15] "GET / HTTP/1.1" 302 0
+[03/Sep/2019 13:37:16] "GET /login/?next=/ HTTP/1.1" 200 3177
+[03/Sep/2019 13:37:16] "GET /static/photo_blog/main.css HTTP/1.1" 200 1057
+[03/Sep/2019 13:37:16] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 200 1460
+[03/Sep/2019 13:37:17] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 200 5045
+[03/Sep/2019 13:37:17] "GET /media/logo.png HTTP/1.1" 200 279424
+[03/Sep/2019 13:37:17] "GET /static/material/css/materialize.forms.css HTTP/1.1" 200 3207
+[03/Sep/2019 13:37:17] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 200 970
+[03/Sep/2019 13:37:17] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 200 18987
+[03/Sep/2019 13:37:17] "GET /static/photo_blog/jquery.waypoints.min.js HTTP/1.1" 200 9028
+[03/Sep/2019 13:37:17] "GET /static/photo_blog/buttons.js HTTP/1.1" 200 529
+[03/Sep/2019 13:37:17] "GET /static/material/css/materialize.css HTTP/1.1" 200 183164
+[03/Sep/2019 13:37:18] "GET /static/material/js/jquery.formset.js HTTP/1.1" 200 8479
+[03/Sep/2019 13:37:18] "GET /static/material/js/materialize.forms.js HTTP/1.1" 200 2061
+[03/Sep/2019 13:37:18] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 200 111678
+[03/Sep/2019 13:37:19] "GET /static/material/js/materialize.js HTTP/1.1" 200 370719
+[03/Sep/2019 13:37:28] "GET / HTTP/1.1" 302 0
+[03/Sep/2019 13:37:28] "GET /login/?next=/ HTTP/1.1" 200 3177
+[03/Sep/2019 13:37:59] "POST /login/?next=/ HTTP/1.1" 200 3440
+[03/Sep/2019 13:48:11] "GET /register/ HTTP/1.1" 200 3957
+[03/Sep/2019 13:49:23] "POST /register/ HTTP/1.1" 302 0
+[03/Sep/2019 13:49:24] "GET /login/ HTTP/1.1" 200 3330
+[03/Sep/2019 13:49:42] "POST /login/ HTTP/1.1" 302 0
+[03/Sep/2019 13:49:42] "GET / HTTP/1.1" 200 3991
+[03/Sep/2019 13:49:43] "GET /media/nav_buttons/home.svg HTTP/1.1" 200 1623
+[03/Sep/2019 13:49:43] "GET /media/nav_buttons/inbox.png HTTP/1.1" 200 496
+[03/Sep/2019 13:49:43] "GET /media/nav_buttons/profile.svg HTTP/1.1" 200 515
+[03/Sep/2019 13:49:43] "GET /media/nav_buttons/search.png HTTP/1.1" 200 907
+[03/Sep/2019 13:49:43] "GET /media/nav_buttons/notifications.svg HTTP/1.1" 200 3052
+[03/Sep/2019 13:49:44] "GET /media/nav_buttons/post.svg HTTP/1.1" 200 4752
+[03/Sep/2019 13:50:03] "GET /messages/inbox/ HTTP/1.1" 200 3886
+[03/Sep/2019 13:50:13] "GET /user/levertsinstagram/ HTTP/1.1" 200 4508
+[03/Sep/2019 13:50:14] "GET /media/default.jpg HTTP/1.1" 200 5153
+[03/Sep/2019 13:50:24] "GET /edit_profile/ HTTP/1.1" 200 5794
+[03/Sep/2019 13:50:24] "GET /media/default.jpg HTTP/1.1" 304 0
+[03/Sep/2019 13:56:30] "GET /edit_profile/ HTTP/1.1" 200 5794
+[03/Sep/2019 13:56:31] "GET /media/default.jpg HTTP/1.1" 304 0
+[03/Sep/2019 13:56:36] "GET / HTTP/1.1" 200 3991
+
+hp@Levert MINGW64 ~/Desktop/django/tests/insta sure b (master)
+$  python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 03, 2019 - 13:58:59
+Django version 2.1.7, using settings 'petsygram.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[03/Sep/2019 13:59:14] "GET / HTTP/1.1" 200 3991
+[03/Sep/2019 13:59:14] "GET /static/photo_blog/buttons.js HTTP/1.1" 200 529
+[03/Sep/2019 13:59:14] "GET /static/photo_blog/jquery.waypoints.min.js HTTP/1.1" 200 9028
+[03/Sep/2019 13:59:14] "GET /static/material/css/materialize.forms.css HTTP/1.1" 200 3207
+[03/Sep/2019 13:59:14] "GET /static/material/css/materialize.css HTTP/1.1" 200 183164
+[03/Sep/2019 13:59:14] "GET /static/photo_blog/main.css HTTP/1.1" 200 1057
+[03/Sep/2019 13:59:14] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 200 18987
+[03/Sep/2019 13:59:14] "GET /static/photo_blog/infinite.min.js HTTP/1.1" 200 1460
+[03/Sep/2019 13:59:14] "GET /media/nav_buttons/inbox.png HTTP/1.1" 200 496
+[03/Sep/2019 13:59:14] "GET /media/logo.png HTTP/1.1" 200 279424
+[03/Sep/2019 13:59:14] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 200 970
+[03/Sep/2019 13:59:14] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 200 5045
+[03/Sep/2019 13:59:14] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 200 111678
+[03/Sep/2019 13:59:14] "GET /static/material/js/jquery.formset.js HTTP/1.1" 200 8479
+[03/Sep/2019 13:59:15] "GET /static/material/js/materialize.js HTTP/1.1" 200 370719
+[03/Sep/2019 13:59:15] "GET /static/material/js/materialize.forms.js HTTP/1.1" 200 2061
+[03/Sep/2019 13:59:15] "GET /media/nav_buttons/home.svg HTTP/1.1" 200 1623
+[03/Sep/2019 13:59:15] "GET /media/nav_buttons/search.png HTTP/1.1" 200 907
+[03/Sep/2019 13:59:15] "GET /media/nav_buttons/post.svg HTTP/1.1" 200 4752
+[03/Sep/2019 13:59:15] "GET /media/nav_buttons/notifications.svg HTTP/1.1" 200 3052
+[03/Sep/2019 13:59:16] "GET /media/nav_buttons/profile.svg HTTP/1.1" 200 515
+Not Found: /favicon.ico
+[03/Sep/2019 13:59:16] "GET /favicon.ico HTTP/1.1" 404 6453
+[03/Sep/2019 13:59:22] "GET /user/levertsinstagram/ HTTP/1.1" 200 4508
+[03/Sep/2019 13:59:23] "GET /media/default.jpg HTTP/1.1" 304 0
+[03/Sep/2019 14:41:29] "GET /post/new/ HTTP/1.1" 200 4994
+[03/Sep/2019 14:41:29] "GET /media/logo.png HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/fonts/material-design-icons/material-icons.css HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/fonts/roboto/style.css HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/css/materialize.forms.css HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/css/jquery.datetimepicker.css HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/js/jquery.datetimepicker.full.js HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/js/jquery.formset.js HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/css/materialize.css HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/js/materialize.forms.js HTTP/1.1" 304 0
+[03/Sep/2019 14:41:30] "GET /static/material/js/materialize.js HTTP/1.1" 304 0
+Internal Server Error: /post/new/
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\contrib\auth\mixins.py", line 52, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\hp\Desktop\django\tests\insta sure b\photo_blog\views.py", line 75, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\edit.py", line 125, in form_valid
+    self.object = form.save()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\forms\models.py", line 458, in save
+    self.instance.save()
+  File "C:\Users\hp\Desktop\django\tests\insta sure b\photo_blog\models.py", line 40, in save
+    exif = img._getexif()
+AttributeError: 'PngImageFile' object has no attribute '_getexif'
+[03/Sep/2019 14:52:16] "POST /post/new/ HTTP/1.1" 500 110316
+Internal Server Error: /post/new/
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\contrib\auth\mixins.py", line 52, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\hp\Desktop\django\tests\insta sure b\photo_blog\views.py", line 75, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\edit.py", line 125, in form_valid
+    self.object = form.save()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\forms\models.py", line 458, in save
+    self.instance.save()
+  File "C:\Users\hp\Desktop\django\tests\insta sure b\photo_blog\models.py", line 40, in save
+    exif = img._getexif()
+AttributeError: 'PngImageFile' object has no attribute '_getexif'
+[03/Sep/2019 14:52:16] "POST /post/new/ HTTP/1.1" 500 110316
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+[03/Sep/2019 14:52:17] "POST /post/new/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 63611)
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 141, in run
+    self.handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 651, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\handlers.py", line 144, in run
+    self.close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\servers\basehttp.py", line 111, in close
+    super().close()
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python36\lib\wsgiref\simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
