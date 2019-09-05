@@ -18,3 +18,10 @@ Upon opening the website you will be prompted to sign up or sign in(if you are a
 A user will also have a personalized profile where they can edit their profile info and image.
 You can also follow other users and view images posted by the users.
 
+### Tech used :computer: 
+1. Python
+2. Django
+3. Postgres
+4. Heroku for deployment
+
+## Set up and Installation
