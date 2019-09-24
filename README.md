@@ -22,7 +22,6 @@ You can also follow other users and view images posted by the users.
 1. Python
 2. Django
 3. Postgres
-4. Heroku for deployment
 
 ## Set up and Installation
 
