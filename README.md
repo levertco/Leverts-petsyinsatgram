@@ -83,7 +83,7 @@ $ install postgresql postgresql-contrib libpq-dev
 ### Known Bugs 
 Currently, there are no known bugs detected.
 
-### Live link
+### Live link!
 You can view the live site [here](https://levertsinstagram.herokuapp.com/)
 
 ### Licence
