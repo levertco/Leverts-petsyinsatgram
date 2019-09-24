@@ -1,4 +1,4 @@
-# Leverts petsyinstagram
+# Leverts gram
 
 ###  Author
 **Levert Ouma**
