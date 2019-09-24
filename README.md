@@ -14,7 +14,7 @@ This is a personal clone of the popular photo-sharing site Instagram
 5. Like a picture and leave a comment on it.
 
 ### How to use
-Upon opening the website you will be prompted to sign up or sign in(if you are an existing user).You will then be able to see posts that other users have posted and also add your own posts.
+Upon opening the website you will be prompted to sign up or sign in (if you are an existing user).You will then be able to see posts that other users have posted and also add your own posts.
 A user will also have a personalized profile where they can edit their profile info and image.
 You can also follow other users and view images posted by the users.
 
@@ -38,7 +38,7 @@ $ pip install django==1.11
 
 #postgres
 $ install postgresql postgresql-contrib libpq-dev
-```
+
 ### Requirements
 1. config==0.4.0
 1. dj-database-url==0.5.0
