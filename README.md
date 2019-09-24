@@ -1,7 +1,7 @@
 # Leverts petsyinstagram
 
 ###  Author
-**Levert Ouma
+**Levert Ouma**
 
 ### Description
 This is a personal clone of the popular photo-sharing site Instagram
