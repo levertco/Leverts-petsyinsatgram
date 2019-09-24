@@ -82,7 +82,7 @@ $ install postgresql postgresql-contrib libpq-dev
 `python3.6 manage.py test photos`
 
 ### Known Bugs 
-Currently, there are no known bugs
+Currently, there are no known bugs detected.
 
 ### Live link
 You can view the live site [here](https://levertsinstagram.herokuapp.com/)
